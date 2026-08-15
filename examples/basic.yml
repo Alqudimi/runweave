@@ -1,6 +1,6 @@
 schema_version: 1
 name: basic-transform
-root: .
+root: ..
 state_dir: .runweave
 steps:
   - id: prepare
