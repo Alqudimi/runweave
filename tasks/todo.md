@@ -46,5 +46,5 @@
 
 - [x] Clean-clone install passes
 - [x] All tests, lint, type checks, build, security checks, and documentation checks pass
-- [ ] GitHub Actions workflow has been verified after push
+- [x] GitHub Actions workflow has been verified after push
 - [x] Release notes and final evidence are complete
