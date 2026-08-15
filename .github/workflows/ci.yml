@@ -53,6 +53,8 @@ jobs:
         with:
           python-version: "3.11"
           cache: pip
+      - name: Upgrade packaging tools
+        run: python -m pip install --upgrade "setuptools>=83.0.0"
       - name: Install audit tool and project
         run: python -m pip install -e '.[dev]'
       - name: Audit dependencies
