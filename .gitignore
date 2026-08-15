@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.json
+htmlcov/
+
+# Environments
+.venv/
+venv/
+.env
+.env.*
+
+# Build artifacts
+build/
+dist/
+*.whl
+*.tar.gz
+
+# RunWeave local state
+.runweave/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store

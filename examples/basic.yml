@@ -1,0 +1,19 @@
+schema_version: 1
+name: basic-transform
+root: .
+state_dir: .runweave
+steps:
+  - id: prepare
+    command: [python, examples/prepare.py]
+    outputs: [build/hello.txt]
+    side_effect: WORKSPACE_WRITE
+    retry:
+      mode: NEVER
+  - id: verify
+    command: [python, examples/verify.py]
+    depends_on: [prepare]
+    inputs: [build/hello.txt]
+    side_effect: PURE
+    retry:
+      mode: ONCE
+      retryable_errors: [NON_ZERO_EXIT]
