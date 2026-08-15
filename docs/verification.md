@@ -20,7 +20,7 @@
 
 ## Published repository verification
 
-The public repository is [Alqudimi/runweave](https://github.com/Alqudimi/runweave) on the `main` branch. GitHub Actions run [31908371672](https://github.com/Alqudimi/runweave/actions/runs/31908371672) completed successfully for Python 3.11 quality, Python 3.12 quality, and dependency security audit jobs. A fresh clone of commit `f721623` installed with `pip install -e '.[dev]'`, validated `examples/basic.yml`, produced its deterministic plan, and executed the sample workflow successfully.
+The public repository is [Alqudimi/runweave](https://github.com/Alqudimi/runweave) on the `main` branch. GitHub Actions run [31908443479](https://github.com/Alqudimi/runweave/actions/runs/31908443479) completed successfully for Python 3.11 quality, Python 3.12 quality, and dependency security audit jobs. A fresh clone of commit `f721623` installed with `pip install -e '.[dev]'`, validated `examples/basic.yml`, produced its deterministic plan, and executed the sample workflow successfully.
 
 ## Scope of evidence
 
