@@ -35,14 +35,20 @@ def main() -> None:
 
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     links = re.findall(r"\]\(([^)#]+)(?:#[^)]*)?\)", readme)
-    broken = [link for link in links if not link.startswith(("http://", "https://")) and not (ROOT / link).exists()]
+    broken = [
+        link
+        for link in links
+        if not link.startswith(("http://", "https://")) and not (ROOT / link).exists()
+    ]
     if broken:
         raise SystemExit(f"Broken local README links: {', '.join(broken)}")
 
     forbidden = (".venv", ".runweave", "coverage.json", "dist/")
     tracked_candidates = [path for path in forbidden if (ROOT / path).exists()]
     if tracked_candidates:
-        print(f"Note: generated paths exist locally and are ignored: {', '.join(tracked_candidates)}")
+        print(
+            f"Note: generated paths exist locally and are ignored: {', '.join(tracked_candidates)}"
+        )
     print(f"Validated {len(REQUIRED_FILES)} required release files, CI jobs, and README links.")
 
 
