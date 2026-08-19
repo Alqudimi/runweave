@@ -1,0 +1,10 @@
+[run]
+source_pkgs = runweave
+branch = false
+parallel = true
+concurrency = multiprocessing
+data_file = .coverage.shared
+
+[report]
+show_missing = false
+fail_under = 0
